@@ -1,10 +1,10 @@
 <?php
 
-use App\\Http\\Controllers\\Public\\ContactController;
-use App\\Http\\Controllers\\Public\\MembershipController;
-use App\\Http\\Controllers\\Public\\NewsController;
-use App\\Http\\Controllers\\Public\\PublicationController;
-use Illuminate\\Support\\Facades\\Route;
+use App\Http\Controllers\Public\ContactController;
+use App\Http\Controllers\Public\MembershipController;
+use App\Http\Controllers\Public\NewsController;
+use App\Http\Controllers\Public\PublicationController;
+use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'public.home')->name('home');
 Route::view('/tentang', 'public.about')->name('about');
