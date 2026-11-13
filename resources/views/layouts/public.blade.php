@@ -11,21 +11,27 @@
 <body>
 <header class="header">
     <div class="container nav">
-        <a href="/" class="brand">
+        <a href="{{ route('home') }}" class="brand">
             <span class="brand-symbol">TM</span>
             <span><b>KOPERASI</b><small>TUNAS MERDEKA</small></span>
         </a>
 
-        <nav class="nav-links">
-            <a href="/">Beranda</a>
-            <a href="/tentang">Tentang Kami</a>
-            <a href="/produk-layanan">Produk & Layanan</a>
-            <a href="/keanggotaan">Keanggotaan</a>
-            <a href="/berita">Berita</a>
-            <a href="/publikasi">Publikasi</a>
+        <button class="mobile-menu-toggle" type="button" aria-controls="primary-navigation"
+                aria-expanded="false" aria-label="Buka menu navigasi">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-links" id="primary-navigation" aria-label="Navigasi utama">
+            <a href="{{ route('home') }}">Beranda</a>
+            <a href="{{ route('about') }}">Tentang Kami</a>
+            <a href="{{ route('services') }}">Produk & Layanan</a>
+            <a href="{{ route('membership') }}">Keanggotaan</a>
+            <a href="{{ route('news') }}">Berita</a>
+            <a href="{{ route('publications') }}">Publikasi</a>
+            <a class="mobile-contact-link" href="{{ route('contact') }}">Kontak</a>
         </nav>
 
-        <a class="nav-cta" href="/keanggotaan">Portal Anggota ↗</a>
+        <a class="nav-cta" href="{{ route('membership') }}">Portal Anggota ↗</a>
     </div>
 </header>
 
@@ -44,15 +50,15 @@
         </div>
         <div>
             <b>Jelajahi</b>
-            <a href="/tentang">Tentang Kami</a>
-            <a href="/produk-layanan">Produk & Layanan</a>
-            <a href="/keanggotaan">Keanggotaan</a>
+            <a href="{{ route('about') }}">Tentang Kami</a>
+            <a href="{{ route('services') }}">Produk & Layanan</a>
+            <a href="{{ route('membership') }}">Keanggotaan</a>
         </div>
         <div>
             <b>Informasi</b>
-            <a href="/berita">Berita</a>
-            <a href="/publikasi">Publikasi</a>
-            <a href="/kontak">Kontak</a>
+            <a href="{{ route('news') }}">Berita</a>
+            <a href="{{ route('publications') }}">Publikasi</a>
+            <a href="{{ route('contact') }}">Kontak</a>
         </div>
         <div>
             <b>Teknologi</b>
