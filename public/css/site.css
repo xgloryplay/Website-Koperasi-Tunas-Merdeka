@@ -123,3 +123,41 @@ h2{font:normal clamp(34px,4vw,48px)/1.2 Georgia,serif;margin:18px 0}
  .content-box{padding:24px 20px}
  .actions .button{width:100%}
 }
+
+
+/* Mobile navigation: keep every public destination reachable without JavaScript. */
+@media (max-width: 650px) {
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 14px 0;
+    }
+    .nav-links {
+        display: flex !important;
+        order: 3;
+        width: 100%;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 8px;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 10px 0 12px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+    .nav-links a {
+        display: inline-flex;
+        flex: 0 0 auto;
+        padding: 10px 12px;
+        border: 1px solid #e4eae4;
+        border-radius: 3px;
+        background: #fff;
+        font-size: 12px;
+    }
+    .nav-cta {
+        flex: 0 0 auto;
+    }
+}
