@@ -4,7 +4,7 @@ Aplikasi web Koperasi Tunas Merdeka berbasis Laravel, dirancang responsif untuk 
 
 ## Teknologi
 
-- PHP 8.3+
+- PHP 8.4.1+ (versi aktual yang kompatibel dengan dependency lock saat ini)
 - Laravel 13
 - SQLite untuk pengembangan awal; MySQL/MariaDB direkomendasikan untuk hosting produksi
 - Vite dan Tailwind CSS
@@ -23,7 +23,7 @@ Ini masih fondasi situs publik dan penerimaan pengajuan. Fitur operasional koper
 
 ## Instalasi lokal
 
-1. Siapkan PHP 8.3+, Composer, Node.js 22+, dan ekstensi PHP yang dibutuhkan Laravel.
+1. Siapkan PHP 8.4.1+, Composer, Node.js 22+, dan ekstensi PHP yang dibutuhkan Laravel.
 2. Clone repository, lalu jalankan:
 
 ```bash
@@ -65,7 +65,7 @@ GitHub Actions menjalankan pemeriksaan ini pada setiap push dan pull request ke 
 
 ## Deployment
 
-Untuk produksi, gunakan hosting/VPS yang mendukung PHP 8.3+, Composer, dan MySQL/MariaDB. Arahkan document root domain ke folder `public`, atur `APP_ENV=production`, `APP_DEBUG=false`, `APP_URL`, kredensial database, dan `APP_KEY` yang unik. Jangan mengunggah file `.env` atau kredensial ke GitHub.
+Untuk produksi, gunakan hosting/VPS yang mendukung PHP 8.4.1+, Composer, dan MySQL/MariaDB. Arahkan document root domain ke folder `public`, atur `APP_ENV=production`, `APP_DEBUG=false`, `APP_URL`, kredensial database, dan `APP_KEY` yang unik. Jangan mengunggah file `.env` atau kredensial ke GitHub.
 
 Setelah mengunggah kode, jalankan:
 
