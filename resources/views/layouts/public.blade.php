@@ -15,7 +15,10 @@
             <span class="brand-symbol">TM</span>
             <span><b>KOPERASI</b><small>TUNAS MERDEKA</small></span>
         </a>
-        <nav class="nav-links" aria-label="Navigasi utama">
+        <button class="mobile-menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-navigation" onclick="const n=document.getElementById('primary-navigation');const o=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',String(!o));this.setAttribute('aria-label',o?'Buka menu':'Tutup menu');n.classList.toggle('is-open',!o);">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="primary-navigation" aria-label="Navigasi utama">
             <a href="/">Beranda</a>
             <a href="/tentang">Tentang Kami</a>
             <a href="/produk-layanan">Produk & Layanan</a>
@@ -61,5 +64,18 @@
         <span>All rights reserved.</span>
     </div>
 </footer>
+<script>
+document.querySelectorAll('#primary-navigation a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        const nav = document.getElementById('primary-navigation');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        nav.classList.remove('is-open');
+        if (toggle) {
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'Buka menu');
+        }
+    });
+});
+</script>
 </body>
 </html>
