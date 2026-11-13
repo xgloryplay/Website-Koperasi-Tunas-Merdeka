@@ -1,0 +1,14 @@
+{
+  "name": "Koperasi Tunas Merdeka",
+  "forwardPorts": [
+    8000
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "Koperasi Tunas Merdeka",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    }
+  },
+  "postStartCommand": "bash .devcontainer/start.sh"
+}
