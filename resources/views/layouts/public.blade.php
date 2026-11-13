@@ -6,39 +6,30 @@
     <meta name="description" content="Koperasi Tunas Merdeka. Bertumbuh Bersama, Sejahtera Bersama.">
     <meta name="theme-color" content="#103D2B">
     <title>@yield('title', 'Koperasi Tunas Merdeka')</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
 </head>
 <body>
 <header class="header">
     <div class="container nav">
-        <a href="{{ route('home') }}" class="brand">
+        <a href="/" class="brand">
             <span class="brand-symbol">TM</span>
             <span><b>KOPERASI</b><small>TUNAS MERDEKA</small></span>
         </a>
-
-        <button class="mobile-menu-toggle" type="button" aria-controls="primary-navigation"
-                aria-expanded="false" aria-label="Buka menu navigasi">
-            <span></span><span></span><span></span>
-        </button>
-
-        <nav class="nav-links" id="primary-navigation" aria-label="Navigasi utama">
-            <a href="{{ route('home') }}">Beranda</a>
-            <a href="{{ route('about') }}">Tentang Kami</a>
-            <a href="{{ route('services') }}">Produk & Layanan</a>
-            <a href="{{ route('membership') }}">Keanggotaan</a>
-            <a href="{{ route('news') }}">Berita</a>
-            <a href="{{ route('publications') }}">Publikasi</a>
-            <a class="mobile-contact-link" href="{{ route('contact') }}">Kontak</a>
+        <nav class="nav-links" aria-label="Navigasi utama">
+            <a href="/">Beranda</a>
+            <a href="/tentang">Tentang Kami</a>
+            <a href="/produk-layanan">Produk & Layanan</a>
+            <a href="/keanggotaan">Keanggotaan</a>
+            <a href="/berita">Berita</a>
+            <a href="/publikasi">Publikasi</a>
+            <a href="/kontak">Kontak</a>
         </nav>
-
-        <a class="nav-cta" href="{{ route('membership') }}">Portal Anggota ↗</a>
+        <a class="nav-cta" href="/login">Portal Anggota ↗</a>
     </div>
 </header>
-
 <main>
     @yield('content')
 </main>
-
 <footer class="footer">
     <div class="container footer-grid">
         <div>
@@ -50,15 +41,15 @@
         </div>
         <div>
             <b>Jelajahi</b>
-            <a href="{{ route('about') }}">Tentang Kami</a>
-            <a href="{{ route('services') }}">Produk & Layanan</a>
-            <a href="{{ route('membership') }}">Keanggotaan</a>
+            <a href="/tentang">Tentang Kami</a>
+            <a href="/produk-layanan">Produk & Layanan</a>
+            <a href="/keanggotaan">Keanggotaan</a>
         </div>
         <div>
             <b>Informasi</b>
-            <a href="{{ route('news') }}">Berita</a>
-            <a href="{{ route('publications') }}">Publikasi</a>
-            <a href="{{ route('contact') }}">Kontak</a>
+            <a href="/berita">Berita</a>
+            <a href="/publikasi">Publikasi</a>
+            <a href="/kontak">Kontak</a>
         </div>
         <div>
             <b>Teknologi</b>
